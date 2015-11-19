@@ -14,14 +14,14 @@ title: Home
             <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           </h1>
 
-          <small class="text-muted">
+          <p class="small text-muted">
             {% if post.date_updated %}
               <del><time data-livestamp="{{ post.date | date_to_xmlschema }}" title="{{ post.date | date: site.date_formats.YMDHMS }}"></time></del>
               Updated: <time data-livestamp="{{ post.date_updated | date_to_xmlschema }}" title="{{ post.date_updated | date: site.date_formats.YMDHMS }}"></time>
             {% else %}
               <time data-livestamp="{{ post.date | date_to_xmlschema }}" title="{{ post.date | date: site.date_formats.YMDHMS }}"></time>
             {% endif %}
-          </small>
+          </p>
 
           <p>
             {% if post.summary %}
