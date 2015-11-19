@@ -2,4 +2,31 @@
 layout: default
 ---
 
-{{ content }}
+<section class="post">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-xs-12">
+
+        <h1>
+          {{ page.title }}
+        </h1>
+
+        <p class="small text-muted">
+          {% if page.date_updated %}
+            <del><time data-livestamp="{{ page.date | date_to_xmlschema }}" title="{{ page.date | date: site.date_formats.YMDHMS }}"></time></del>
+            Updated: <time data-livestamp="{{ page.date_updated | date_to_xmlschema }}" title="{{ page.date_updated | date: site.date_formats.YMDHMS }}"></time>
+          {% else %}
+            <time data-livestamp="{{ page.date | date_to_xmlschema }}" title="{{ page.date | date: site.date_formats.YMDHMS }}"></time>
+          {% endif %}
+        </p>
+
+        <p>
+          {{ content }}
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</section>
