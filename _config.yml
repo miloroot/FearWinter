@@ -8,3 +8,6 @@ paginate:    5
 permalink:   /:title/
 
 exclude:     ['README.md', 'LICENSE.md', 'CHANGELOG.md', 'Gemfile', 'Gemfile.lock']
+
+# change to true if "published: false" posts should show anyway, this is mostly for debugging
+unpublished: false
