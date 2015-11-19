@@ -1,0 +1,10 @@
+# Site settings
+title:       Fear Winter
+tagline:
+description:
+url:         http://silentcreativity.github.io/
+baseurl:     /FearWinter
+paginate:    5
+permalink:   /:title/
+
+exclude:     ['README.md', 'LICENSE.md', 'CHANGELOG.md', 'Gemfile', 'Gemfile.lock']
