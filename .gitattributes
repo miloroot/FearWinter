@@ -1,0 +1,45 @@
+* text eol=lf
+
+# Documents
+*.doc binary
+*.DOC binary
+*.docx binary
+*.DOCX binary
+*.dot binary
+*.DOT binary
+*.pdf binary
+*.PDF binary
+*.rtf binary
+*.RTF binary
+*.md text
+*.adoc text
+*.textile text
+*.mustache text
+*.csv text
+*.tab text
+*.tsv text
+*.sql text
+
+# Graphics
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.tif binary
+*.tiff binary
+*.ico binary
+*.svg text
+*.eps binary
+
+# Misc
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.flv binary
+*.fla binary
+*.swf binary
+*.gz binary
+*.zip binary
+*.7z binary
+*.ttf binary
+*.pyc binary

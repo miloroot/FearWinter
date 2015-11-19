@@ -1,0 +1,19 @@
+# Site settings
+title:       Fear Winter
+tagline:
+description:
+url:         http://silentcreativity.github.io/
+baseurl:     /FearWinter
+paginate:    5
+permalink:   /:year/:month/:day/:title/
+
+date_formats:
+  md:        '%b %d'             # Jan 01
+  ymd:       '%Y %b %d'          # 2000 Jan 01
+  YMDHMS:    '%Y-%m-%d %H:%M:%S' # 2000-01-01 00:00:00
+  YMD:       '%Y-%m-%d'          # 2000-01-01
+
+exclude:     ['README.md', 'LICENSE.md', 'CHANGELOG.md', 'Gemfile', 'Gemfile.lock']
+
+# change to true if "published: false" posts should show anyway, this is mostly for debugging
+unpublished: false

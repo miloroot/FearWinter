@@ -1,11 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Fear Winter</title>
-  </head>
-  <body>
+---
+layout: default
+title: Home
+---
 
-    <p>Fear Winter!</p>
+<section class="home">
+  <div class="container">
 
-  </body>
-</html>
+    {% for post in site.posts %}
+      <div class="row">
+        <div class="col-xs-12">
+
+          <h1>
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h1>
+
+          <p class="small text-muted">
+            {% if post.date_updated %}
+              <del><time data-livestamp="{{ post.date | date_to_xmlschema }}" title="{{ post.date | date: site.date_formats.YMDHMS }}"></time></del>
+              Updated: <time data-livestamp="{{ post.date_updated | date_to_xmlschema }}" title="{{ post.date_updated | date: site.date_formats.YMDHMS }}"></time>
+            {% else %}
+              <time data-livestamp="{{ post.date | date_to_xmlschema }}" title="{{ post.date | date: site.date_formats.YMDHMS }}"></time>
+            {% endif %}
+          </p>
+
+          <p>
+            {% if post.summary %}
+              {{ post.summary }}
+            {% else %}
+              {{ post.excerpt }}
+            {% endif %}
+          </p>
+
+          {% unless forloop.last %}
+            <hr>
+          {% endunless %}
+
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
+</section>
